@@ -4,7 +4,7 @@ import GuestGuard from "guards/GuestGuard";
 import AdminMaster from "layouts/AdminMaster";
 import React, { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-const Test = lazy(() => import("pages/Test"));
+const Home = lazy(() => import("pages/Home"));
 const Login = lazy(() => import("pages/Login"));
 const UserInfo = lazy(() => import("pages/UserInfo"));
 const NoMatchFrm = lazy(() => import("pages/NoMatchFrm"));
@@ -32,7 +32,7 @@ function RoutesMain() {
               }
             />
           </Route>
-          <Route path="" element={<Test />} />
+          <Route path="" element={<Home />} />
           <Route path="*" element={<NoMatchFrm />} />
         </Routes>
       </Suspense>
